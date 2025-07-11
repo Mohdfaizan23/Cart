@@ -1,0 +1,304 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bogo-bar {
+    width: 343px;
+    height: 24px;
+    color: #FF6B82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    opacity: 1;
+}
+
+.bogo-bar .line {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.bogo-bar .text {
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 343px;
+}
+
+.card-label {
+    display: block;
+    position: relative;
+    cursor: default;
+}
+
+.card-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 14.46px;
+    height: 14.46px;
+    border: 0.9px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease;
+}
+
+.card-radio::before {
+    content: "";
+    width: 9.04px;
+    height: 9.04px;
+    border-radius: 50%;
+    background-color: #FF6B82;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.card-radio:checked {
+    border-color: #FF6B82;
+}
+
+.card-radio:checked::before {
+    opacity: 1;
+}
+
+.card {
+    width: 343px;
+    border: 0.9px solid #C8C8C8;
+    padding: 16px 48px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    user-select: none;
+    overflow: hidden;
+}
+
+.card-radio:checked+.card {
+    border: 2px solid #FF6B82;
+    background-color: #fffafa;
+}
+
+.badge {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    width: 119px;
+    height: 26px;
+    background: #FF6B82;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 10;
+}
+
+.badge span {
+    font-weight: 700;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.card-radio:checked+.card .badge {
+    display: flex;
+}
+
+.card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.left .std-price {
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+    opacity: 1;
+}
+
+.off-label {
+    width: 55px;
+    height: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #FF6B82;
+    padding: 2px 6px;
+    display: inline-block;
+    user-select: none;
+}
+
+.unit {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.right {
+    font-weight: 600;
+    color: #222;
+    text-align: right;
+    width: 120px;
+}
+
+.right .price {
+    font-weight: 500;
+    font-size: 14.46px;
+    line-height: 18px;
+}
+
+.original-price {
+    font-weight: 400;
+    font-size: 10px;
+    text-decoration: line-through;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.card-options {
+    display: none;
+    margin-top: 8px;
+}
+
+.card-radio:checked+.card .card-options {
+    display: block;
+}
+
+.card-options-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-header-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-label {
+    font-weight: 400;
+    font-size: 10px;
+    color: #000000;
+    width: 75px;
+}
+
+.sno-header {
+    width: 20px;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sno-label {
+    font-size: 10px;
+    width: 20px;
+}
+
+.size-select,
+.color-select {
+    width: 75px;
+    height: 25px;
+    border: 0.9px solid #D9D9D9;
+    border-radius: 2px;
+    font-size: 10.85px;
+    color: #000;
+}
+
+.bottom-summary {
+    margin-top: 30px;
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#free-delivery {
+    color: #FF6B82;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#totalDisplay {
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+}
+
+.btn-powered-wrapper {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.global-add-btn {
+    margin-top: 10px;
+    width: 342px;
+    height: 40px;
+    background: #FF6B82;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.addToCart {
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.powered-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.powered-by {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    color: #00000066;
+    text-align: right;
+}
