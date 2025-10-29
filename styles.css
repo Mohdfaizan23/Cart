@@ -302,3 +302,7 @@ body {
     color: #00000066;
     text-align: right;
 }
+.outerdiv {
+    background-color: white;
+    padding: 20px;
+}
